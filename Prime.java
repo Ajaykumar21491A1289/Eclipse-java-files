@@ -1,34 +1,27 @@
-package Basic_Programs;
-import java.util.Scanner;
+package online;
 
+import java.util.*;
 public class Prime {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
-
-        if (isPrime(number)) {
-            System.out.println(number + " is a prime number.");
-        } else {
-            System.out.println(number + " is not a prime number.");
-        }
-
-        scanner.close();
-    }
-
-    public static boolean isPrime(int number) {
-        // Numbers less than 2 are not prime
-        if (number < 2) {
-            return false;
-        }
-
-        // Check for factors from 2 to the square root of the number
-        for (int i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) {
-                return false; // Found a factor, so it's not a prime number
-            }
-        }
-
-        return true; // No factors found, so it's a prime number
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter a No");
+		int n = in.nextInt();
+		if (prime(n))
+			System.out.println("Prime");
+		else
+			System.out.println("Not prime");
+	}
+   static boolean prime(int n)
+    {
+    	boolean flag = true;
+    	for(int i=2;i<n;i++)
+    	{
+    		if (n % i == 0)
+    		{
+    			flag = false;
+    			break;
+    		}
+    	}
+    	return flag;
     }
 }

@@ -1,25 +1,21 @@
-package Basic_Programs;
-import java.util.Scanner;
+package online;
+import java.util.*;
 public class Palindrome {
-
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-        System.out.println("enter a number");
-        int n=sc.nextInt();
-        int num=n,res=0;
-        while(n!=0) {
-        	int rem=0;
-        	rem = n%10;
-        	res = res*10 + rem;
-        	n = n/10;
-        }
-        System.out.println(res);
-        if(num == res) {
-        	System.out.println("it is a palindrome");
-        }
-        else {
-        	System.out.println("Not a palindrome");
-        }
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter a No");
+		int n = in.nextInt();
+		int m = n;
+		int rev=0;
+		while (n != 0)
+		{
+			rev = rev * 10 + n % 10;
+			n = n / 10;
+		}
+		if (m == rev)
+			System.out.println("true");
+		else
+			System.out.println("false");
 	}
 
 }
