@@ -1,4 +1,4 @@
-package StudyHour;
+package Arrays;
 import java.util.*;
 public class TRanspose90 {
 

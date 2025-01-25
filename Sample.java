@@ -1,23 +1,19 @@
-package RemovingDuplicateElementsFromList;
+package StringHifentofirst;
 import java.util.*;
-public class Sample {
+public  class Sample {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-ArrayList<String> s = new ArrayList<String>();
-s.add("Apple");
-s.add("Banana");
-s.add("Apple");
-s.add("Cherry");
-s.add("Banana");
-
-System.out.println(s);
-
-//Converting to Set
-
-HashSet<String> set = new HashSet<>(s);
-ArrayList<String> s1= new ArrayList<String>(set);
-System.out.println(s1);
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter the String");
+		String s =sc.nextLine();
+        String[] s1 =s.split("-");
+        int len = s1.length;
+        int j=0;
+        for(int i=0;i<len-1;i++) {
+        	System.out.print("-");
+        }
+        for(String sr:s1)
+        	System.out.print(sr);
 	}
 
 }
