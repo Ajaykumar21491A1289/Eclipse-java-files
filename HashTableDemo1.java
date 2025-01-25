@@ -1,7 +1,7 @@
 package collectionframework;
 import java.util.HashMap;
 import java.util.*;
-public class HashMapDemo {
+public class HashTableDemo1 {
 
 	public static void main(String[] args) {
 		HashMap hm = new HashMap();
@@ -19,4 +19,6 @@ public class HashMapDemo {
         while(i.hasNext()) {
         	System.out.println(i.next());
         }
-        System.out.println();}}
+	}
+
+}

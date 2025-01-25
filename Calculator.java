@@ -1,24 +1,15 @@
-package CheatSheet;
-import java.util.*;
-public class Calculator {
+package mypack;
 
+public class Calculator {   //class
+   int a=10;                //Attributes
+   int b=20;
+   public  void display() { //Methods
+	   System.out.println(a+b);
+   }
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-Scanner sc = new Scanner(System.in);
-int n = sc.nextInt();
-int m= sc.nextInt();
-int sum = Calculator(n,m);
-System.out.println(sum);
-	
-	}
-
-	private static int Calculator(int n, int m) {
-		int totalsum=0;
-		for(int i=n;i<=m;i++) {
-			if(i%3==0 && i%5==0)
-				totalsum+=i;
-		}
-		return totalsum;
+		
+    Calculator cl = new Calculator(); //objects
+    cl.display();
 	}
 
 }

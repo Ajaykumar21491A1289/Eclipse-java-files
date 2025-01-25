@@ -1,30 +1,26 @@
-package ArrayList1;
+package collectionframework;
 import java.util.*;
+
 public class ArrayListDemo1 {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> l = new ArrayList<Integer>();
-        l.add(10);
-        l.add(2);
-        l.add(30);
-        l.add(40);
-        l.add(50);
-        l.add(60);
-        System.out.println(l);//[10, 2, 30, 40, 50, 60]
-        l.add(1,20);
-        System.out.println(l);//[10, 20, 2, 30, 40, 50, 60]
-        l.remove(6);
-        System.out.println(l);//[10, 20, 2, 30, 40, 50]
-        l.remove(4);
-        System.out.println(l);//[10, 20, 2, 30, 50]
-        System.out.println(l.get(0));//10
-        l.set(0, 100);
-        System.out.println(l.size());//5
-        System.out.println(l.isEmpty());//false
-        System.out.println(l.contains(30));//true
-        System.out.println(l.indexOf(100));//0
-        Object[] arr = l.toArray();
-        System.out.println(arr);
-	}
+		ArrayList l = new ArrayList();
+		l.add(10);
+		l.add("XXX");
+		l.add("YYY");
+		l.add(20);
+		System.out.println(l);//[10, XXX, YYY, 20]
+		l.add(2,"ppp");
+		System.out.println(l);//[10, XXX, ppp, YYY, 20]
+		l.set(2, "qqq");
+		System.out.println(l);//[10, XXX, qqq, YYY, 20]
+		l.remove("qqq");
+		System.out.println(l);//[10, XXX, YYY, 20]
+		l.remove(2);
+		System.out.println(l);//[10, XXX, 20]
+		String s = (String)l.get(1);//here we are converting the object type to string type 
+		//the linked list always returns the object type
 
-}
+		System.out.println(s);//xxx
+		System.out.println(l.size());//3
+}}

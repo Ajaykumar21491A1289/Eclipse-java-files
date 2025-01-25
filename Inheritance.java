@@ -1,35 +1,36 @@
-package StudyHour;
-import java.util.*;
-class Animal{
-	String name;
-Animal(String name){
-	this.name=name;
-}
-public void display(){
-	System.out.println("Then Animal Name is : "+name);
-}
-}
-class Dog extends Animal{
-	
-	Dog(String name){
-	   super(name);
-	   super.display();
+package mypack;
+class Super{
+	int i;
+	int j;
+	void input1(int i,int j) {
+		this.i=i;
+		this.j=j;
 	}
-	
-}
-class Cat extends Animal{
-	Cat(String name){
-		super(name);
-		super.display();
+	void display1() {
+		System.out.println("i="+i+" "+"j = "+j);
 	}
 }
-
+class Sub extends Super{
+	int k;
+	void input2(int k) {
+		this.k=k;
+	}
+	void display2() {
+		System.out.println("k ="+k);
+	}
+}
 public class Inheritance {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-Cat c =new Cat("Meow");
-Dog d = new Dog("Oxy");
+		Super s = new Super();
+		s.input1(10,20); 
+		s.display1();          //i=10;j=20
+		System.out.println();
+		Sub s1=new Sub();
+		s1.input1(30,40);
+		s1.display1();         //i=30 j=40
+		s1.input2(50);
+		s1.display2();         //k=50
 	}
 
 }
