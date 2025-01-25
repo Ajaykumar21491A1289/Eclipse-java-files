@@ -1,4 +1,4 @@
-package StudyHour;
+package array;
 import java.util.Scanner;
 public class Sumofmatrices {
 
